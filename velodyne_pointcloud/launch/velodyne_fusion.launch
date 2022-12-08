@@ -1,0 +1,19 @@
+<launch>
+    <env name="ROSCONSOLE_CONFIG_FILE" value="$(find velodyne_pointcloud)/cfg/debug_console.conf"/>
+    <include file="$(find velodyne_pointcloud)/launch/32e_points.launch" ns="red">
+        <arg name="frame_id" value="velodyne_red"/>
+        <arg name="port" value="2368"/>
+    </include>
+    <include file="$(find velodyne_pointcloud)/launch/32e_points.launch" ns="yellow">
+        <arg name="frame_id" value="velodyne_yellow"/>
+        <arg name="port" value="2369"/>
+    </include>
+    <include file="$(find velodyne_pointcloud)/launch/32e_points.launch" ns="green">
+        <arg name="frame_id" value="velodyne_green"/>
+        <arg name="port" value="2370"/>
+    </include>
+    <include file="$(find velodyne_pointcloud)/launch/32e_points.launch" ns="blue">
+        <arg name="frame_id" value="velodyne_blue"/>
+        <arg name="port" value="2371"/>
+    </include>
+</launch>
